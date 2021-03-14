@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <form id="signForm" action="{{ action }}" method="{{ method }}">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="ex. John">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="ex. Echostone">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" class="form-control" id="phone" name="phone" placeholder="ex. 555-123-5677">
+    </div>
+    {% if email %}
+    <div class="form-group">
+      <label for="phone">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="ex. john@example.com">
+    </div>
+    {% endif %}
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}
